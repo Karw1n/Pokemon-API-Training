@@ -11,7 +11,8 @@ if response.status_code == 200:
     print(f"Name: {data['name']}")
     print(f"Id: {data['id']}")   
     print(f"Types: {[type['type']['name'] for type in data['types']]}") 
-    print(f"Sprite URL: {data['sprites']['front_default']}")
+    sprite_urls = [val for val in data['sprites'].values() if val is not None and isinstance(val, str)]
+    print(f"Sprite URLs: {sprite_urls}")
 elif response.status_code == 404:
     print("Pokemon not found.")
 elif response.status_code == 500:
