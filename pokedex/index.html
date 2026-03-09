@@ -6,11 +6,23 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Pokédex</h1>
-    <div id="pokemon-list">
+    <!--Main Header-->
+    <div>
+        <h1>Pokédex</h1>
+    </div>
+    
+    <div id="search-pokemon">
         <!-- Pokémon entries will be dynamically inserted here -->
+        <input id="search-pokemon-input" placeholder="Enter Pokemon Here"></input>
+        <button id="search-pokemon-button">Find</button>
     </div>
 
-    <script src="script.js"></script>
+    <div id="display-pokemon">
+
+    </div>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>
