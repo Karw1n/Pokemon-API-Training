@@ -1,6 +1,8 @@
-async function fetchPokemon(pokemonName) {
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
+
+export async function fetchPokemon(pokemonName) {
     try {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}/`);
+        const response = await fetch(`${BASE_URL}/${pokemonName}/`);
         
         // Request valid but input is not
         if (!response.ok) {

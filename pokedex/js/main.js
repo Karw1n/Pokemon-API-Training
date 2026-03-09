@@ -1,10 +1,13 @@
+import { fetchPokemon } from "./api.js";
+
 const searchInput = document.getElementById("search-pokemon-input");
 const searchButton = document.getElementById("search-pokemon-button");
 const displayDiv = document.getElementById("display-pokemon");
 
 function handleSearchClick() {
-    const userValue = searchInput.value;
-    console.log(userValue);
+    const userValue = searchInput.value.trim().toLowerCase();
+
+    console.log(fetchPokemon(userValue));
     // Displays the userValue
     displayDiv.textContent = userValue;
 }

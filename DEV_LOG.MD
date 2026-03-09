@@ -26,3 +26,19 @@ The catch, catches errors where the api call was not succesful.
 Call was succesful, entering a valid pokemon returns it's information.
 
 When pokemon is invalid 'Pokemon not found' error is returned
+
+[Push] Add parameter handling and implement try-catch error handling.
+
+Next objective is to link the input field on the html page to the fetchPokemon function.
+
+Imported the api.js into main.js.
+Removed lower-case command from the fetchPokemon() function as input will handled/checked by handleSearchClick().
+
+Encountering an import error:
+'Uncaught SyntaxError: Cannot use import statement outside a module'
+
+This error was caused by the way I was loading my script in the HTML file. I've since added 'type="module"' which makes the browser allow imports or exports. Also needed to make the fetchPokemon() exportable with the 'export' key.
+
+Input field now works as intended, you can search a pokemon as its data is logged in the console.
+
+[Push] Connect search input to PokeAPI and fetch Pokémon data
