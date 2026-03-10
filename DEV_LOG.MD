@@ -1,4 +1,4 @@
-**Current Progress 09/03/2026**
+**09/03/2026**
 
 - Created a python file to test the retrieval of api using python.
 - Created a html and js file. Current functionality is an input box that once the user enters text it will display whatever text is inputted.
@@ -42,3 +42,14 @@ This error was caused by the way I was loading my script in the HTML file. I've 
 Input field now works as intended, you can search a pokemon as its data is logged in the console.
 
 [Push] Connect search input to PokeAPI and fetch Pokémon data
+
+**10/03/2026**
+
+Objective:
+[x] Print fetched data to html page (unformatted)
+[ ] Nicely format web page
+[ ] Add a spritie of the image
+[ ] Create a header where user's can search
+
+In order to print the data, I first need to know what data I want to display. This will mean working with json to extrat/format the data I want. Therefore my first task will be to pick out data from the api call we have in console.
+Had to alter the handleSearchClicker. I had to change the function to be async and wait for the fetch command, otherwise there won't acutally be data for it to retrieve due to how requests and async calls work. I've for now printed the stringify of json to the html page. Looks a mess but it's the correct data which is what I'm more concerend about. Now I have to detmerine what data i want to display. 

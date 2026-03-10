@@ -4,12 +4,13 @@ const searchInput = document.getElementById("search-pokemon-input");
 const searchButton = document.getElementById("search-pokemon-button");
 const displayDiv = document.getElementById("display-pokemon");
 
-function handleSearchClick() {
+async function handleSearchClick() {
     const userValue = searchInput.value.trim().toLowerCase();
-
-    console.log(fetchPokemon(userValue));
+    const pokemon = await fetchPokemon(userValue);
+    console.log(pokemon);
+    console.log(pokemon.name);
     // Displays the userValue
-    displayDiv.textContent = userValue;
+    displayDiv.textContent = JSON.stringify(pokemon);
 }
 
 
