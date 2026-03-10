@@ -5,7 +5,7 @@
 
 Objective today:
 [x] Succesfully pull data from api
-[] link user input to pull data
+[x] link user input to pull data
 
 
 Creating an function 'getPokemon' that is going to retrieve data from the PokeApi.
