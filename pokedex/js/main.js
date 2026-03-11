@@ -12,7 +12,7 @@ async function handleSearchClick() {
     console.log(pokemon.name);
 
     const pokemonCard = renderPokemon(pokemon);
-    displayDiv.appendChild(pokemonCard);
+    displayDiv.replaceChildren(pokemonCard);
 }
 
 

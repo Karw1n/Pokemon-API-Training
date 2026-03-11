@@ -56,9 +56,9 @@ Had to alter the handleSearchClicker. I had to change the function to be async a
 
 **11/03/2026**
 Objective:
-[ ] Nicely format web page, displaying a few key information
+[x] Nicely format web page, displaying a few key information
 
-I've got the web page to display the whole stringify, but of course it looks very messy and unreadable, so today will polish up that input.
+I've got the web page to display the whole stringify, but of course it looks very messy and unreadable, so today will polish up that input. For now I'll add name, height and type
 My plan is to make a function that specifcally displays the content, creating a set template that can be reused. I will have to determine where this is put though. As it is a dynamic element for the web page I feel like it should be on the main.js as that handles the dynamic content.
 
 I'm currently reviewing the structure of the project, ensuring that I can make a well structured future proof structure.
@@ -92,3 +92,12 @@ The map() follows my use case more here.
 Created a container in the renderPokemon(), that is then returned to main.js where the content is then appended to the pokemonDisplay body.
 
 [Push] Render Pokémon details (name, height, types) in UI
+
+I quickly realised in the main.js that as we are appending the child in the call:
+
+displayDiv.appendChild(pokemonCard);
+
+Everytime I perform a new search it won't replace the previous search it will just append the new search.
+By changing appendChild to replaceChildren this solves the issue
+
+[Push] Fix UI so new Pokémon search replaces previous result
