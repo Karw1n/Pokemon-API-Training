@@ -1,4 +1,5 @@
 import { fetchPokemon } from "./api.js";
+import { renderPokemon } from "./ui.js";
 
 const searchInput = document.getElementById("search-pokemon-input");
 const searchButton = document.getElementById("search-pokemon-button");
@@ -9,8 +10,9 @@ async function handleSearchClick() {
     const pokemon = await fetchPokemon(userValue);
     console.log(pokemon);
     console.log(pokemon.name);
-    // Displays the userValue
-    displayDiv.textContent = JSON.stringify(pokemon);
+
+    const pokemonCard = renderPokemon(pokemon);
+    displayDiv.appendChild(pokemonCard);
 }
 
 

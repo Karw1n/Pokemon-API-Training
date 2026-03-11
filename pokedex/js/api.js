@@ -15,3 +15,4 @@ export async function fetchPokemon(pokemonName) {
         console.error(error);
     }
 }
+

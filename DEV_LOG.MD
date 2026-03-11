@@ -52,4 +52,43 @@ Objective:
 [ ] Create a header where user's can search
 
 In order to print the data, I first need to know what data I want to display. This will mean working with json to extrat/format the data I want. Therefore my first task will be to pick out data from the api call we have in console.
-Had to alter the handleSearchClicker. I had to change the function to be async and wait for the fetch command, otherwise there won't acutally be data for it to retrieve due to how requests and async calls work. I've for now printed the stringify of json to the html page. Looks a mess but it's the correct data which is what I'm more concerend about. Now I have to detmerine what data i want to display. 
+Had to alter the handleSearchClicker. I had to change the function to be async and wait for the fetch command, otherwise there won't acutally be data for it to retrieve due to how requests and async calls work. I've for now printed the stringify of json to the html page. Looks a mess but it's the correct data which is what I'm more concerend about. Now I have to detmerine what data i want to display.
+
+**11/03/2026**
+Objective:
+[ ] Nicely format web page, displaying a few key information
+
+I've got the web page to display the whole stringify, but of course it looks very messy and unreadable, so today will polish up that input.
+My plan is to make a function that specifcally displays the content, creating a set template that can be reused. I will have to determine where this is put though. As it is a dynamic element for the web page I feel like it should be on the main.js as that handles the dynamic content.
+
+I'm currently reviewing the structure of the project, ensuring that I can make a well structured future proof structure.
+Flow Diagram of the strucutre of the user request
+User input
+     ↓
+main.js
+     ↓
+api.js
+     ↓
+Pokemon data returned
+     ↓
+ui.js
+     ↓
+render pokemon card
+
+For the types element of a pokemon, it is often the case that some pokemon have multiple types and therefor the object returns a list. I discovered that there's too ways to do so, foreach() or map().
+This is the foreach way. Upon reading online, for each is often used to perform side effects like logging or updating values
+const types = [];
+
+pokemon.types.forEach(t => {
+    types.push(t.type.name);
+});
+
+This is the map() which is used for transforming data and and returns a new array, leaving the original unchanged
+
+const types = pokemon.types.map(t => t.type.name);
+
+The map() follows my use case more here.
+
+Created a container in the renderPokemon(), that is then returned to main.js where the content is then appended to the pokemonDisplay body.
+
+[Push] Render Pokémon details (name, height, types) in UI
