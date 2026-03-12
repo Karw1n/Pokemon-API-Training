@@ -104,9 +104,21 @@ By changing appendChild to replaceChildren this solves the issue
 
 **12/03/20206***
 Objective:
-[ ] Add a sprite image of the Pokemon
-[ ] Add coloured badges for pokemon types
+[x] Add a sprite image of the Pokemon
+[x] Add coloured badges for pokemon types
  so 
 I discovered that the luxury of an API means that I do not have to locally store the image sprites, they come directly with teh API response. Following the same pattern as the other elements I was able to easily add the sprite to display. There are some exceptions however, I've noticed some Gen 9 pokemon won't display and my assumption is that they don't have a front_default or so have some different forms. I could confirm with logs.
 
 For now I'm going to ignore the issue (sounds like a horrible thing to do as a developer), as I might want to have moving sprites which may mean using an alternate source for the sprites.
+
+[Push] Added image display of Pokemon Sprite
+
+Now I will attempt to create some styling for the type. Giving them a background colour based on their type. As there's no API for this, I will have to edit the colours myself in the CSS. 
+
+What I ended up creating was a dictonary that has each type as a key and its background colour as value. This is done in the ui.js. I had to modify how the types is displayed seperating the functionality. So I've made it into a mini container:
+ └─ typesContainer
+      ├─ Types:
+      ├─ [Grass]
+      └─ [Poison]
+
+[Push] Added coloured background to displaying Types
