@@ -121,4 +121,6 @@ What I ended up creating was a dictonary that has each type as a key and its bac
       ├─ [Grass]
       └─ [Poison]
 
-[Push] Added coloured background to displaying Types
+[Push] Added coloured background to Types text
+
+[Push] Updated ui.js from snake case to Camel Case
