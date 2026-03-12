@@ -101,3 +101,12 @@ Everytime I perform a new search it won't replace the previous search it will ju
 By changing appendChild to replaceChildren this solves the issue
 
 [Push] Fix UI so new Pokémon search replaces previous result
+
+**12/03/20206***
+Objective:
+[ ] Add a sprite image of the Pokemon
+[ ] Add coloured badges for pokemon types
+ so 
+I discovered that the luxury of an API means that I do not have to locally store the image sprites, they come directly with teh API response. Following the same pattern as the other elements I was able to easily add the sprite to display. There are some exceptions however, I've noticed some Gen 9 pokemon won't display and my assumption is that they don't have a front_default or so have some different forms. I could confirm with logs.
+
+For now I'm going to ignore the issue (sounds like a horrible thing to do as a developer), as I might want to have moving sprites which may mean using an alternate source for the sprites.
