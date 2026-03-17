@@ -48,7 +48,7 @@ Input field now works as intended, you can search a pokemon as its data is logge
 Objective:
 [x] Print fetched data to html page (unformatted)
 [ ] Nicely format web page
-[ ] Add a spritie of the image
+[x] Add a spritie of the image
 [ ] Create a header where user's can search
 
 In order to print the data, I first need to know what data I want to display. This will mean working with json to extrat/format the data I want. Therefore my first task will be to pick out data from the api call we have in console.
@@ -102,7 +102,7 @@ By changing appendChild to replaceChildren this solves the issue
 
 [Push] Fix UI so new Pokémon search replaces previous result
 
-**12/03/20206***
+**12/03/20206**
 Objective:
 [x] Add a sprite image of the Pokemon
 [x] Add coloured badges for pokemon types
@@ -124,3 +124,11 @@ What I ended up creating was a dictonary that has each type as a key and its bac
 [Push] Added coloured background to Types text
 
 [Push] Updated ui.js from snake case to Camel Case
+
+**17/03/2026**
+Objective:
+[x] Create a nav bar containing Title and search option
+
+Created a header/nav bar section in the index file that now contains the search field. Used some styling to create a pokedex theme
+
+[Push] Added nav bar and move search field inside nav bar.
