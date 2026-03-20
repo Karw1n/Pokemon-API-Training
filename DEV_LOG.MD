@@ -49,7 +49,7 @@ Objective:
 [x] Print fetched data to html page (unformatted)
 [ ] Nicely format web page
 [x] Add a spritie of the image
-[ ] Create a header where user's can search
+[x] Create a header where user's can search
 
 In order to print the data, I first need to know what data I want to display. This will mean working with json to extrat/format the data I want. Therefore my first task will be to pick out data from the api call we have in console.
 Had to alter the handleSearchClicker. I had to change the function to be async and wait for the fetch command, otherwise there won't acutally be data for it to retrieve due to how requests and async calls work. I've for now printed the stringify of json to the html page. Looks a mess but it's the correct data which is what I'm more concerend about. Now I have to detmerine what data i want to display.
@@ -132,3 +132,10 @@ Objective:
 Created a header/nav bar section in the index file that now contains the search field. Used some styling to create a pokedex theme
 
 [Push] Added nav bar and move search field inside nav bar.
+
+**20/03/2026**
+[x] Center Search field in nav bar
+
+The way I approached this object was to split the nav bar into 3 sub sections, left, center, and right. In their CSS I aligned them to the correct places. I also added a title for the pokedex itself
+
+[Push] Centred search bar and added title in nav bar.

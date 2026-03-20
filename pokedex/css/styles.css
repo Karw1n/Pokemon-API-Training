@@ -1,4 +1,4 @@
-nav {
+.navbar {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
@@ -9,4 +9,25 @@ nav {
   color: white;
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+
+  gap: 20px;
+}
+
+.nav-left {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: right;
 }
