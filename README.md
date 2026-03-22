@@ -13,13 +13,12 @@ Within this project, I'll explore:
 
 **Currently Implemented:**
 - User input capture and display
+- Display Pokémon sprite/image
 
 **In Progress:**
-- 
 
 **Planned:**
-- Display Pokémon sprite/image
-- Show pokemon abilites and moves
+
 
 
 Technologies Used
