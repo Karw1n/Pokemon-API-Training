@@ -5,6 +5,7 @@ export async function fetchPokemon(pokemonName) {
         const response = await fetch(`${BASE_URL}/${pokemonName}/`);
         
         // Request valid but input is not
+        // @TODO There might be other reasons for a failed repsonse, e.g. user not connected
         if (!response.ok) {
             throw new Error("Pokemon not found");
         }
