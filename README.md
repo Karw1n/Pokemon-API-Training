@@ -18,7 +18,13 @@ Within this project, I'll explore:
 **In Progress:**
 
 **Planned:**
-
+- Dynamic spirits (interactable?)
+- Search Enhancements (search by ID, autocomplete)
+- List view (e.g. like Pokémon website)
+- Pokemon details expansion (abilities, stats, moves)
+- Favorites System
+- Evolution Chain
+- Routing / Multi-Page
 
 
 Technologies Used
